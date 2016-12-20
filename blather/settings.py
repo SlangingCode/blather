@@ -62,7 +62,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['blat/templates',
-                 'rockmeout/templates',
+                 'rockmysocks/templates',
                  ],
         'APP_DIRS': True,
         'OPTIONS': {

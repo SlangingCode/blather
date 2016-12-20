@@ -17,7 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from blat import views as blat_views
-from rockmeout import views as rmo_views
+from rockmysocks import views as rmo_views
 
 urlpatterns = [
     # Blat
@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/edit/$', blat_views.EditBlatView.as_view(), name='editblat'),
 
     # Rock Me Out
-    url(r'^rockmeout/$', rmo_views.home, name='rmo_homepage'),
+    url(r'^rockmysocks/$', rmo_views.home, name='rms_homepage'),
 ]
 
 if settings.DEBUG:
