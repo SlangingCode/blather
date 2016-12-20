@@ -1,9 +1,10 @@
 .idea
 
+*.swp
+
 blather-venv/
 
 __pycache__
 *.pyc
-*.swp
 
 db.sqlite3
