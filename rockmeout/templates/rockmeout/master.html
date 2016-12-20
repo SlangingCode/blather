@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>
+       {% block title %}
+            Rock Me Out: DJ service from Spotify
+       {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'rockmeout/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'rmo_homepage'%}">Rock Me Out</a></h1>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

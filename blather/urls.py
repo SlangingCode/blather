@@ -16,18 +16,22 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from blat import views
+from blat import views as blat_views
+from rockmeout import views as rmo_views
 
 urlpatterns = [
+    # Blat
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'^$', views.home, name='homepage'),
-    url(r'^$', views.IndexView.as_view(), name='homepage'),
-    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
+    url(r'^$', blat_views.IndexView.as_view(), name='homepage'),
+    url(r'^(?P<pk>[0-9]+)/$', blat_views.DetailView.as_view(), name='detail'),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'^my/$', views.MyView.as_view(), name='myview'),
-    url(r'^create/$', views.NewBlatView.as_view(), name='newblat'),
-    url(r'^(?P<pk>[0-9]+)/edit/$', views.EditBlatView.as_view(), name='editblat'),
+    url(r'^my/$', blat_views.MyView.as_view(), name='myview'),
+    url(r'^create/$', blat_views.NewBlatView.as_view(), name='newblat'),
+    url(r'^(?P<pk>[0-9]+)/edit/$', blat_views.EditBlatView.as_view(), name='editblat'),
+
+    # Rock Me Out
+    url(r'^rockmeout/$', rmo_views.home, name='rmo_homepage'),
 ]
 
 if settings.DEBUG:

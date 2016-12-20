@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xv5!)v5cv(p_^_2#2$duq^6w&f!wmak2&4qm(ye$i*rrhv(ec*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 INTERNAL_IPS = ('127.0.0.1', )
 
-ALLOWED_HOSTS = ['geoffcox77.com', 'www.geoffcox77.com',]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -61,7 +61,9 @@ ROOT_URLCONF = 'blather.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['blat/templates'],
+        'DIRS': ['blat/templates',
+                 'rockmeout/templates',
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
