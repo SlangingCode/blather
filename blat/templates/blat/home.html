@@ -8,6 +8,7 @@
             <dt>{{blat.text }}</dt>
             <dd>
                 <a href="{% url 'detail' pk=blat.id %}">{{blat.created_on|naturaltime}}</a>
+                by @{{ blat.created_by }}
                 {% if blat.via %}
                     <a href="{{blat.via}}">/via</a>
                 {% endif %}
