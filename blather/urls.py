@@ -25,4 +25,6 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^my/$', views.MyView.as_view(), name='myview'),
+    url(r'^create/$', views.NewBlatView.as_view(), name='newblat'),
+    url(r'^(?P<pk>[0-9]+)/edit/$', views.EditBlatView.as_view(), name='editblat'),
 ]

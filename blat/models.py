@@ -18,3 +18,9 @@ class Blat(models.Model):
 
 class Like(models.Model):
     blat = models.ForeignKey(Blat)
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User)
+    bio = models.TextField(blank=True)
+    blog = models.URLField(blank=True)
