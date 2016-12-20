@@ -12,6 +12,7 @@ Class-based views
 Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
@@ -28,3 +29,9 @@ urlpatterns = [
     url(r'^create/$', views.NewBlatView.as_view(), name='newblat'),
     url(r'^(?P<pk>[0-9]+)/edit/$', views.EditBlatView.as_view(), name='editblat'),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]

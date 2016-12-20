@@ -25,6 +25,8 @@ SECRET_KEY = 'xv5!)v5cv(p_^_2#2$duq^6w&f!wmak2&4qm(ye$i*rrhv(ec*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+INTERNAL_IPS = ('127.0.0.1', )
+
 ALLOWED_HOSTS = []
 
 
@@ -38,7 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blat',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'debug_toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,6 +53,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'blather.urls'
