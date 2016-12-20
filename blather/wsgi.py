@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blather.settings")
 sys.path.append('/var/www/geoffcox77.com/blather/blat/')
-sys.path.append('/var/www/geoffcox77.com/blather/rockmeout/')
+sys.path.append('/var/www/geoffcox77.com/blather/rockmysocks/')
 sys.path.append('/var/www/geoffcox77.com/blather/')
 
 application = get_wsgi_application()

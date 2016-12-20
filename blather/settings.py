@@ -27,7 +27,7 @@ DEBUG = True
 
 INTERNAL_IPS = ('127.0.0.1', )
 
-ALLOWED_HOSTS = ['geoffcox77.com', 'www.geoffcox77.com']
+ALLOWED_HOSTS = ['localhost', 'geoffcox77.com', 'www.geoffcox77.com']
 
 
 # Application definition
@@ -40,9 +40,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blat',
-    'rockmeout',
+    'rockmysocks',
     'django.contrib.humanize',
-    # 'debug_toolbar',
+    'debug_toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -54,7 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'blather.urls'
