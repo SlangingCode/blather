@@ -1,4 +1,7 @@
 .idea
+
+blather-venv/
+
 __pycache__
 *.pyc
 *.swp
